@@ -390,7 +390,9 @@ script = ExtResource("3_odvu6")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_sohxe")
-animation = &"run_with_sword"
+animation = &"dead_hit"
+frame = 3
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -2.5)
@@ -401,6 +403,7 @@ visible = false
 modulate = Color(0.137255, 0.423529, 0, 1)
 sprite_frames = SubResource("SpriteFrames_cwldb")
 animation = &"fall"
+frame_progress = 0.708624
 
 [node name="EffectsSword" type="AnimatedSprite2D" parent="."]
 z_index = 2

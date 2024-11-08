@@ -749,7 +749,7 @@ position = Vector2(151.155, -74.916)
 texture = ExtResource("5_wnelp")
 
 [node name="Cloud2" type="Sprite2D" parent="Background"]
-position = Vector2(-89.27, -36.984)
+position = Vector2(-90.2799, -38.2765)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("6_72w4y")
 
