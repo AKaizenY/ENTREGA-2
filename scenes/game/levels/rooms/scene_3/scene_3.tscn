@@ -925,8 +925,3 @@ position = Vector2(1123, 160)
 position = Vector2(711, 530)
 animation = "run"
 moving_direction = "right"
-
-[node name="Crabby4" parent="." instance=ExtResource("9_hfvte")]
-position = Vector2(946, 419)
-animation = "run"
-moving_direction = "right"
