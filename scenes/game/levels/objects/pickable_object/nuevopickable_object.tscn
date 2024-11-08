@@ -1,12 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://b5qjvfbte4svk"]
+[gd_scene load_steps=15 format=3 uid="uid://nb5ihf1ovjws"]
 
-[ext_resource type="Texture2D" uid="uid://bf07pseiwwxp6" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/diamond_effect/01.png" id="4_pca1h"]
-[ext_resource type="Texture2D" uid="uid://byqyu752jfnr1" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/diamond_effect/02.png" id="5_wps02"]
-[ext_resource type="Texture2D" uid="uid://bmgyta8ufw14h" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/diamond_effect/03.png" id="6_0xa2y"]
-[ext_resource type="Texture2D" uid="uid://n47d46qjjtlm" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/coin_effect/01.png" id="6_xv0o1"]
-[ext_resource type="Texture2D" uid="uid://bkqcurpg6xq3v" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/coin_effect/02.png" id="7_ewl5e"]
-[ext_resource type="Texture2D" uid="uid://b4s6057mbcjcg" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/diamond_effect/04.png" id="7_qmpyn"]
-[ext_resource type="Texture2D" uid="uid://bqtelhgdi3cfn" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/coin_effect/03.png" id="8_udmu3"]
+[ext_resource type="Texture2D" uid="uid://n47d46qjjtlm" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/coin_effect/01.png" id="1_3os5p"]
+[ext_resource type="Texture2D" uid="uid://bkqcurpg6xq3v" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/coin_effect/02.png" id="2_vmtdk"]
+[ext_resource type="Texture2D" uid="uid://bqtelhgdi3cfn" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/coin_effect/03.png" id="3_ous2k"]
+[ext_resource type="Texture2D" uid="uid://bf07pseiwwxp6" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/diamond_effect/01.png" id="4_wmpq4"]
+[ext_resource type="Texture2D" uid="uid://byqyu752jfnr1" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/diamond_effect/02.png" id="5_c1j3b"]
+[ext_resource type="Texture2D" uid="uid://bmgyta8ufw14h" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/diamond_effect/03.png" id="6_wc75o"]
+[ext_resource type="Texture2D" uid="uid://b4s6057mbcjcg" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/diamond_effect/04.png" id="7_mvt68"]
+[ext_resource type="Texture2D" uid="uid://bmn2hx61jlm7n" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/gold_coin/01.png" id="8_gj706"]
+[ext_resource type="Texture2D" uid="uid://bosp5l4cys2vv" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/gold_coin/02.png" id="9_7fbd8"]
+[ext_resource type="Texture2D" uid="uid://l026ummyfo1j" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/gold_coin/03.png" id="10_gilie"]
+[ext_resource type="Texture2D" uid="uid://dhjgv3bpubs32" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/gold_coin/04.png" id="11_nmal4"]
 
 [sub_resource type="GDScript" id="GDScript_5io65"]
 resource_local_to_scene = true
@@ -100,13 +104,13 @@ resource_local_to_scene = true
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_xv0o1")
+"texture": ExtResource("1_3os5p")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_ewl5e")
+"texture": ExtResource("2_vmtdk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_udmu3")
+"texture": ExtResource("3_ous2k")
 }, {
 "duration": 1.0,
 "texture": null
@@ -117,16 +121,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_pca1h")
+"texture": ExtResource("4_wmpq4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_wps02")
+"texture": ExtResource("5_c1j3b")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_0xa2y")
+"texture": ExtResource("6_wc75o")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_qmpyn")
+"texture": ExtResource("7_mvt68")
 }, {
 "duration": 1.0,
 "texture": null
@@ -135,7 +139,19 @@ animations = [{
 "name": &"diamond_taken",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_gj706")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7fbd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gilie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nmal4")
+}],
 "loop": true,
 "name": &"idle",
 "speed": 5.0

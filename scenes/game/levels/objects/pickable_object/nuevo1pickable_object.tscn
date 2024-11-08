@@ -1,12 +1,24 @@
-[gd_scene load_steps=11 format=3 uid="uid://b5qjvfbte4svk"]
+[gd_scene load_steps=23 format=3 uid="uid://b7ptgil5hm1cw"]
 
-[ext_resource type="Texture2D" uid="uid://bf07pseiwwxp6" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/diamond_effect/01.png" id="4_pca1h"]
-[ext_resource type="Texture2D" uid="uid://byqyu752jfnr1" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/diamond_effect/02.png" id="5_wps02"]
-[ext_resource type="Texture2D" uid="uid://bmgyta8ufw14h" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/diamond_effect/03.png" id="6_0xa2y"]
-[ext_resource type="Texture2D" uid="uid://n47d46qjjtlm" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/coin_effect/01.png" id="6_xv0o1"]
-[ext_resource type="Texture2D" uid="uid://bkqcurpg6xq3v" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/coin_effect/02.png" id="7_ewl5e"]
-[ext_resource type="Texture2D" uid="uid://b4s6057mbcjcg" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/diamond_effect/04.png" id="7_qmpyn"]
-[ext_resource type="Texture2D" uid="uid://bqtelhgdi3cfn" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/coin_effect/03.png" id="8_udmu3"]
+[ext_resource type="Texture2D" uid="uid://cjmo8mrouktgt" path="res://scenes/game/levels/objects/MOENDA/tile000.png" id="1_4wy3y"]
+[ext_resource type="Texture2D" uid="uid://n47d46qjjtlm" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/coin_effect/01.png" id="1_jb8g6"]
+[ext_resource type="Texture2D" uid="uid://dgltrscrlgyca" path="res://scenes/game/levels/objects/MOENDA/tile001.png" id="2_1c1f4"]
+[ext_resource type="Texture2D" uid="uid://bkqcurpg6xq3v" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/coin_effect/02.png" id="2_tkwym"]
+[ext_resource type="Texture2D" uid="uid://bqtelhgdi3cfn" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/coin_effect/03.png" id="3_7pxn6"]
+[ext_resource type="Texture2D" uid="uid://xcu6n6hg5c8i" path="res://scenes/game/levels/objects/MOENDA/tile002.png" id="3_yklr5"]
+[ext_resource type="Texture2D" uid="uid://b11gxsdxttves" path="res://scenes/game/levels/objects/MOENDA/tile003.png" id="4_d00ap"]
+[ext_resource type="Texture2D" uid="uid://bf07pseiwwxp6" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/diamond_effect/01.png" id="4_g5eel"]
+[ext_resource type="Texture2D" uid="uid://bpnex2nrhvbku" path="res://scenes/game/levels/objects/MOENDA/tile004.png" id="5_d4vh2"]
+[ext_resource type="Texture2D" uid="uid://byqyu752jfnr1" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/diamond_effect/02.png" id="5_oxsgp"]
+[ext_resource type="Texture2D" uid="uid://bmgyta8ufw14h" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/diamond_effect/03.png" id="6_4dg6b"]
+[ext_resource type="Texture2D" uid="uid://b3meewcra7y4t" path="res://scenes/game/levels/objects/MOENDA/tile005.png" id="6_7w10m"]
+[ext_resource type="Texture2D" uid="uid://cpxdnxhqd1uog" path="res://scenes/game/levels/objects/MOENDA/tile006.png" id="7_rcaxq"]
+[ext_resource type="Texture2D" uid="uid://b4s6057mbcjcg" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/diamond_effect/04.png" id="7_vp183"]
+[ext_resource type="Texture2D" uid="uid://bmn2hx61jlm7n" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/gold_coin/01.png" id="8_3gp5s"]
+[ext_resource type="Texture2D" uid="uid://dadcp1mhyke8o" path="res://scenes/game/levels/objects/MOENDA/tile007.png" id="8_vagqe"]
+[ext_resource type="Texture2D" uid="uid://bosp5l4cys2vv" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/gold_coin/02.png" id="9_l4orf"]
+[ext_resource type="Texture2D" uid="uid://l026ummyfo1j" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/gold_coin/03.png" id="10_dgh3l"]
+[ext_resource type="Texture2D" uid="uid://dhjgv3bpubs32" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/gold_coin/04.png" id="11_c4pbx"]
 
 [sub_resource type="GDScript" id="GDScript_5io65"]
 resource_local_to_scene = true
@@ -24,6 +36,8 @@ script/source = "extends Area2D
 	\"red_diamond\",
 	\"gold_coin\",
 	\"silver_coin\",
+	\"blue potion\",
+	
 ) var animation: String
 
 # Definimos el sprite animado de la moneda
@@ -52,7 +66,7 @@ func _ready():
 	_animated_sprite.sprite_frames.set_frame(\"idle\", 3, load(_animation4))
 	
 	# Reproducimos la animación idle
-	_animated_sprite.play(\"idle\")
+	_animated_sprite.play(animation)
 	
 
 func _on_animated_sprite_2d_animation_finished():
@@ -100,13 +114,42 @@ resource_local_to_scene = true
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_xv0o1")
+"texture": ExtResource("1_4wy3y")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_ewl5e")
+"texture": ExtResource("2_1c1f4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_udmu3")
+"texture": ExtResource("3_yklr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d00ap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_d4vh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7w10m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rcaxq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vagqe")
+}],
+"loop": true,
+"name": &"blue potion",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jb8g6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tkwym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7pxn6")
 }, {
 "duration": 1.0,
 "texture": null
@@ -117,16 +160,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_pca1h")
+"texture": ExtResource("4_g5eel")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_wps02")
+"texture": ExtResource("5_oxsgp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_0xa2y")
+"texture": ExtResource("6_4dg6b")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_qmpyn")
+"texture": ExtResource("7_vp183")
 }, {
 "duration": 1.0,
 "texture": null
@@ -135,7 +178,19 @@ animations = [{
 "name": &"diamond_taken",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_3gp5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_l4orf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_dgh3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_c4pbx")
+}],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
@@ -144,12 +199,13 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_p0cjw"]
 radius = 7.0
 
-[node name="PickableObject" type="Area2D"]
+[node name="nuevo1" type="Area2D"]
+position = Vector2(64, 43)
 script = SubResource("GDScript_5io65")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2ebd0")
-animation = &"idle"
+animation = &"blue potion"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_p0cjw")
