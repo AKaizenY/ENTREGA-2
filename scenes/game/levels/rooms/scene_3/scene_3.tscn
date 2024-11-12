@@ -822,7 +822,7 @@ rotation = -6.28319
 scale = Vector2(2.3, 2)
 
 [node name="Death" parent="DieArea" instance=ExtResource("10_xjiyq")]
-position = Vector2(41.7391, 283)
+position = Vector2(42.1729, 273)
 
 [node name="DamageObject" type="Node2D" parent="."]
 
